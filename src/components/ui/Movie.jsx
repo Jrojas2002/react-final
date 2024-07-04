@@ -9,10 +9,18 @@ const Movie = ({ option }) => {
 
   function filteredMovies() {
     if (option === "OLD_TO_NEW") {
-      index.sort((a, b) => a.Year - b.Year);
+      index.sort((a, b) => {
+        const aYear = parseInt(a.Year.split("-").pop());
+        const bYear = parseInt(b.Year.split("-").pop());
+        return aYear - bYear;
+      });
     }
     if (option === "NEW_TO_OLD") {
-      index.sort((a, b) => b.Year - a.Year);
+      index.sort((a, b) => {
+        const aYear = parseInt(a.Year.split("-").pop());
+        const bYear = parseInt(b.Year.split("-").pop());
+        return bYear - aYear;
+      });
     }
   }
   filteredMovies();

@@ -16,7 +16,7 @@ const MovieInfo = () => {
           <FontAwesomeIcon
             className="icon__back"
             icon="fa-solid fa-arrow-left"
-            onClick={() => navigate("/movies")}
+            onClick={() => ("/movies")}
           />
         </div>
         <div className="movie__info">
